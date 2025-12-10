@@ -40,6 +40,11 @@ function createItem(item) {
         const items = getTasksFromDOM();
         saveTasks(items);
     });
+
+	editButton.addEventListener('click', () => {
+        textElement.setAttribute('contenteditable', 'true');
+        textElement.focus();
+    });
 }
 
 function getTasksFromDOM() {
